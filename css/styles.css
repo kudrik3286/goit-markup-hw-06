@@ -180,7 +180,6 @@ img {
 }
 
 .modal-form-input {
-  appearance: none;
   display: block;
   padding-left: 42px;
 
@@ -189,6 +188,9 @@ img {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
+
+  transition: border-color var(--timing) var(--timing-function);
 }
 .modal-form-input:focus {
   border-color: var(--accen-color);
@@ -239,6 +241,7 @@ img {
   background-image: url(../img/icon-check1.svg);
   background-size: contain;
   background-origin: border-box;
+  background-repeat: no-repeat;
 }
 
 .modal-form-checkbox-icon {
@@ -251,7 +254,7 @@ img {
   border: 1px solid var(--title-text-color);
 
   transition-property: border-color, backgraund-image, background-color,
-    background-origin, background-size;
+    background-origin, background-size, background-repeat;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -969,13 +972,15 @@ img {
 
   width: 358px;
   height: 50px;
+  color: var(--primary-whit-color);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+  outline: none;
 
-  color: var(--primary-whit-color);
+  transition: border-color var(--timing) var(--timing-function);
 }
 
 .form-footer-input:focus {
@@ -998,10 +1003,6 @@ img {
 }
 .form-footer-grup label {
   margin-bottom: 20px;
-}
-
-.form-fotter-input:placeholder-shown {
-  border-color: var(--accen-color);
 }
 
 .form-footer-btn {
